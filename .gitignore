@@ -1,2 +1,7 @@
-gen
-bin
+bin/
+gen/
+.classpath
+.project
+project.properties
+.gitignore
+.settings

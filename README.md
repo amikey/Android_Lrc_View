@@ -1,3 +1,18 @@
+fork自[douzifly AndroidLrcView](https://github.com/douzifly/AndroidLrcView)
+在此基础上新增功能：
+
+- 支持显示多行文本(Draw multi-line text to Canvas)；
+- 完成类似网易云音乐的「上下滚动歌词」功能：
+「上下滚动歌词」满足用户查看「非当前正在播放处歌词」的需求，超时后「上下滚动歌词」后回滚到「当前正在播放处」。
+
+![Image3](https://github.com/li2/AndroidLrcView/blob/master/android-lrc-view-1.png)
+
+By weiyi.li
+weiyi.just2@gmail.com li2.me
+2015-06-14
+
+------
+
 LrcView can parse and display standard lrc file.Use single touch to seek progress and multi touch to scale font size.
 
 Copyright 2012 (c) Xiaoyuan Lau douzifly@gmail.com

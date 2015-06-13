@@ -17,7 +17,6 @@ import android.view.Menu;
 import android.view.View;
 import douzi.android.view.DefaultLrcBuilder;
 import douzi.android.view.ILrcBuilder;
-import douzi.android.view.ILrcView;
 import douzi.android.view.ILrcView.LrcViewListener;
 import douzi.android.view.LrcRow;
 import douzi.android.view.LrcView;
@@ -25,7 +24,7 @@ import douzi.android.view.LrcView;
 public class MainActivity extends Activity {
 
 	public final static String TAG = "MainActivity";
-	ILrcView mLrcView;
+	LrcView mLrcView;
     private int mPalyTimerDuration = 1000;
     private Timer mTimer;
     private TimerTask mTask;
@@ -53,6 +52,7 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mLrcView = new LrcView(this, null);
+        mLrcView.setBackgroundColor(getResources().getColor(android.R.color.white));
         setContentView((View) mLrcView);
         //file:///android_asset/test.lrc;
         String lrc = getFromAssets("test.lrc");
@@ -96,6 +96,7 @@ public class MainActivity extends Activity {
     	mPlayer = new MediaPlayer();
     	try {
     		mPlayer.setDataSource(getAssets().openFd("m.mp3").getFileDescriptor());
+    		mPlayer.setLooping(true);
     		mPlayer.setOnPreparedListener(new OnPreparedListener() {
 
 				public void onPrepared(MediaPlayer mp) {
